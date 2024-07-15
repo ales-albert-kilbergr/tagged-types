@@ -1,7 +1,7 @@
 {
   "name": "@kilbergr/tagged-types",
   "description": "Opaque types library",
-  "version": "0.1.0-Alpha.1",
+  "version": "0.1.0-Alpha.2",
   "author": {
     "name": "Kilbergr",
     "email": "ales.albert@kilbergr.eu"
@@ -19,88 +19,6 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
-  "exports": {
-    "bic": {
-      "import": "./dist/esm/lib/bic/bic.js",
-      "require": "./dist/cjs/lib/bic/bic.js",
-      "types": "./dist/types/lib/bic/bic.d.ts"
-    },
-    "bic-bank-code": {
-      "import": "./dist/esm/lib/bic-bank-code/bic-bank-code.js",
-      "require": "./dist/cjs/lib/bic-bank-code/bic-bank-code.js",
-      "types": "./dist/types/lib/bic-bank-code/bic-bank-code.d.ts"
-    },
-    "bic-branch-code": {
-      "import": "./dist/esm/lib/bic-branch-code/bic-branch-code.js",
-      "require": "./dist/cjs/lib/bic-branch-code/bic-branch-code.js",
-      "types": "./dist/types/lib/bic-branch-code/bic-branch-code.d.ts"
-    },
-    "bic-location-code": {
-      "import": "./dist/esm/lib/bic-location-code/bic-location-code.js",
-      "require": "./dist/cjs/lib/bic-location-code/bic-location-code.js",
-      "types": "./dist/types/lib/bic-location-code/bic-location-code.d.ts"
-    },
-    "country-code": {
-      "import": "./dist/esm/lib/country-code/country-code.js",
-      "require": "./dist/cjs/lib/country-code/country-code.js",
-      "types": "./dist/types/lib/country-code/country-code.d.ts"
-    },
-    "currency-code": {
-      "import": "./dist/esm/lib/currency-code/currency-code.js",
-      "require": "./dist/cjs/lib/currency-code/currency-code.js",
-      "types": "./dist/types/lib/currency-code/currency-code.d.ts"
-    },
-    "iban": {
-      "import": "./dist/esm/lib/iban/iban.js",
-      "require": "./dist/cjs/lib/iban/iban.js",
-      "types": "./dist/types/lib/iban/iban.d.ts"
-    },
-    "bban": {
-      "import": "./dist/esm/lib/bban/bban.js",
-      "require": "./dist/cjs/lib/bban/bban.js",
-      "types": "./dist/types/lib/bban/bban.d.ts"
-    },
-    "iban-account-number": {
-      "import": "./dist/esm/lib/iban-account-number/iban-account-number.js",
-      "require": "./dist/cjs/lib/iban-account-number/iban-account-number.js",
-      "types": "./dist/types/lib/iban-account-number/iban-account-number.d.ts"
-    },
-    "email": {
-      "import": "./dist/esm/lib/email/email.js",
-      "require": "./dist/cjs/lib/email/email.js",
-      "types": "./dist/types/lib/email/email.d.ts"
-    },
-    "email-with-display-name": {
-      "import": "./dist/esm/lib/email-with-display-name/email-with-display-name.js",
-      "require": "./dist/cjs/lib/email-with-display-name/email-with-display-name.js",
-      "types": "./dist/types/lib/email-with-display-name/email-with-display-name.d.ts"
-    },
-    "uuid": {
-      "import": "./dist/esm/lib/uuid/uuid.js",
-      "require": "./dist/cjs/lib/uuid/uuid.js",
-      "types": "./dist/types/lib/uuid/uuid.d.ts"
-    },
-    "jwt": {
-      "import": "./dist/esm/lib/jwt/jwt.js",
-      "require": "./dist/cjs/lib/jwt/jwt.js",
-      "types": "./dist/types/lib/jwt/jwt.d.ts"
-    },
-    "testing": {
-      "import": "./dist/esm/lib/testing/testing.js",
-      "require": "./dist/cjs/lib/testing/testing.js",
-      "types": "./dist/types/lib/testing/testing.d.ts"
-    },
-    "tld": {
-      "import": "./dist/esm/lib/tld/tld.js",
-      "require": "./dist/cjs/lib/tld/tld.js",
-      "types": "./dist/types/lib/tld/tld.d.ts"
-    },
-    "url": {
-      "import": "./dist/esm/lib/url/url.js",
-      "require": "./dist/cjs/lib/url/url.js",
-      "types": "./dist/types/lib/url/url.d.ts"
-    }
-  },
   "scripts": {
     "test": "jest",
     "format": "prettier --write .",
@@ -108,9 +26,8 @@
     "build:types": "tsc -p tsconfig.types.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build": "rm -rf ./dist && npm run build:types && npm run build:cjs && npm run build:esm",
-    "prepublish": "npm run test && npm run build",
-    "publish": "npm publish --access public"
+    "build": "yarn zx .bin/build.mjs",
+    "publish": "yarn test && yarn build && cd ./dist && npm publish --access public && cd .."
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -128,7 +45,8 @@
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "type-fest": "^4.20.1",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.2",
+    "zx": "^8.1.4"
   },
   "dependencies": {
     "validator": "^13.12.0"

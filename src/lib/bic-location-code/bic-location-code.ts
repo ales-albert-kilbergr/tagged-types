@@ -1,5 +1,5 @@
 import type { Tagged } from 'type-fest';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 /**
  * Expose the BIC location code string subtype.

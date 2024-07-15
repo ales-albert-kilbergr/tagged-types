@@ -1,5 +1,5 @@
 import type { Tagged } from 'type-fest';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 /**
  * The BIC branch code string subtype. The Branch code is represented by the

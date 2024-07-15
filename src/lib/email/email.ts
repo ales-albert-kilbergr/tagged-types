@@ -1,6 +1,6 @@
 import type { Tagged } from 'type-fest';
 import isEmail from 'validator/lib/isEmail';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 export type email = Tagged<string, 'Email'>;
 

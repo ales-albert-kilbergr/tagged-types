@@ -1,5 +1,5 @@
 import isCountryCode from 'validator/lib/isISO31661Alpha2';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 // ISO31661 Alpha2
 // prettier-ignore

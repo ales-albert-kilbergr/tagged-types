@@ -2,8 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "ESNext",
-    "outDir": "./dist/esm",
-    "removeComments": true
+    "removeComments": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"]

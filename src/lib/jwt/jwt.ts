@@ -1,6 +1,6 @@
 import type { Tagged } from 'type-fest';
 import isJwt from 'validator/lib/isJwt';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 export type jwt = Tagged<string, 'Jwt'>;
 

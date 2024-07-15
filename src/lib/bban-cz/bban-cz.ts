@@ -2,7 +2,7 @@ import type { Tagged } from 'type-fest';
 import { BBAN } from '../bban/bban';
 import type { bban } from '../bban/bban';
 import type { countryCode } from '../country-code/country-code';
-import { declareTaggedType } from '../utils';
+import { declareTaggedType } from '../tagged-type/tagged-type';
 
 // Public CZ BBAN constants --------------------------------------------
 const TYPE_LENGTH = 20;

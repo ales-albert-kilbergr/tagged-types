@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Tagged } from 'type-fest';
 import type { countryCode } from '../country-code/country-code';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 import type { BBAN_CZ_Components } from '../bban-cz/bban-cz';
 import type { BBAN_DE_Components } from '../bban-de/bban-de';
 import type { BBAN_AT_Components } from '../bban-at/bban-at';

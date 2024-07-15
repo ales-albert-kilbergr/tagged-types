@@ -1,7 +1,7 @@
 // Public TLD constants --------------------------------------------------------
 
 import type { Tagged } from 'type-fest';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 const TYPE_LENGTH = 2;
 

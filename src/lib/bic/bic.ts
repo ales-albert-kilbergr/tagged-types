@@ -5,7 +5,7 @@
  */
 import type { Tagged } from 'type-fest';
 import isBIC from 'validator/lib/isBIC';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 import { BICBankCode, type bicBankCode } from '../bic-bank-code/bic-bank-code';
 import { CountryCode, type countryCode } from '../country-code/country-code';
 import {

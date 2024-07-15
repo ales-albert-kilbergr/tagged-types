@@ -1,5 +1,5 @@
 import isCurrencyCode from 'validator/lib/isISO4217';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 // prettier-ignore
 export type currencyCode = | 
   'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' |

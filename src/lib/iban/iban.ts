@@ -3,7 +3,7 @@ import isIBAN from 'validator/lib/isIBAN';
 import { CountryCode, type countryCode } from '../country-code/country-code';
 import { BBAN } from '../bban/bban';
 import type { bban } from '../bban/bban';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 import {
   IbanCheckDigit,
   type ibanCheckDigit,

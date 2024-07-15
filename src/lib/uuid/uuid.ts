@@ -1,6 +1,6 @@
 import type { Tagged } from 'type-fest';
 import isUUID from 'validator/lib/isUUID';
-import { declareTaggedType, TaggedTypeError } from '../utils';
+import { declareTaggedType, TaggedTypeError } from '../tagged-type/tagged-type';
 
 export type uuid = Tagged<string, 'uuid'>;
 
