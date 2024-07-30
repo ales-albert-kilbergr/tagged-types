@@ -1,7 +1,7 @@
 {
   "name": "@kilbergr/tagged-types",
   "description": "Opaque types library",
-  "version": "0.1.0-Alpha.2",
+  "version": "0.1.0-Alpha.3",
   "author": {
     "name": "Kilbergr",
     "email": "ales.albert@kilbergr.eu"
@@ -11,10 +11,10 @@
     "typescript"
   ],
   "license": "MIT",
-  "url": "https://github.com/ales-albert-kilbergr/uuid-type/#readme",
+  "url": "https://github.com/ales-albert-kilbergr/tagged-type/#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ales-albert-kilbergr/uuid-type.git"
+    "url": "git+https://github.com/ales-albert-kilbergr/tagged-type.git"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -23,9 +23,6 @@
     "test": "jest",
     "format": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "build:types": "tsc -p tsconfig.types.json",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
     "build": "yarn zx .bin/build.mjs",
     "publish": "yarn test && yarn build && cd ./dist && npm publish --access public && cd .."
   },
@@ -50,5 +47,6 @@
   },
   "dependencies": {
     "validator": "^13.12.0"
-  }
+  },
+  "packageManager": "yarn@4.3.1"
 }
