@@ -1,24 +1,6 @@
 #!/usr/bin/env zx
 import * as fs from 'fs';
 
-async function listPackages(path) {
-  return fs.promises.readdir(path);
-}
-
-async function generatePackageJsonManifests(options) {
-  const packages = await listPackages(options.path);
-
-  for (let i = 0; i < packages.length; i++) {
-    const pkg = packages[i];
-    // Check if the package is a directory
-    const stat = await fs.promises.stat(`${options.path}/${pkg}`);
-    if (!stat.isDirectory()) {
-      continue;
-    }
-    await $`echo '{"type": "${options.type}"}' > ${options.path}/${pkg}/package.json`;
-  }
-}
-
 async function getListOfPackages() {
   const packages = await fs.promises.readdir('./src/lib');
 
@@ -28,8 +10,6 @@ async function getListOfPackages() {
       return stat.isDirectory();
     }),
   );
-
-  return packages;
 }
 
 try {

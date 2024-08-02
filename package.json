@@ -1,7 +1,7 @@
 {
   "name": "@kilbergr/tagged-types",
   "description": "Opaque types library",
-  "version": "0.1.0-Alpha.3",
+  "version": "0.1.0-Alpha.4",
   "author": {
     "name": "Kilbergr",
     "email": "ales.albert@kilbergr.eu"
@@ -24,7 +24,8 @@
     "format": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "build": "yarn zx .bin/build.mjs",
-    "publish": "yarn test && yarn build && cd ./dist && npm publish --access public && cd .."
+    "publish": "yarn test && yarn build && cd ./dist && npm publish --access public && cd ..",
+    "docs": ".bin/docs.mjs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -42,6 +43,7 @@
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "type-fest": "^4.20.1",
+    "typedoc": "^0.26.5",
     "typescript": "^5.5.2",
     "zx": "^8.1.4"
   },

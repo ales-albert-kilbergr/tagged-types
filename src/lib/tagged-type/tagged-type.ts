@@ -1,8 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types
 export function TaggedTypeError(typeName: string) {
   return class extends TypeError {
-    public constructor(input: unknown) {
-      super(`The input ${String(input)} is not a valid "${typeName}".`);
+    public constructor(input: unknown, failedAction = '') {
+      super(
+        `${failedAction} The input ${String(input)} is not a valid "${typeName}".`,
+      );
     }
   };
 }
