@@ -1,7 +1,7 @@
 {
   "name": "@kilbergr/tagged-types",
   "description": "Opaque types library",
-  "version": "0.1.0-Alpha.4",
+  "version": "0.1.0-Alpha.5",
   "author": {
     "name": "Kilbergr",
     "email": "ales.albert@kilbergr.eu"
